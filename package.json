@@ -1,0 +1,28 @@
+{
+  "name": "florian",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "eslint": "^6.8.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "helmet": "^3.22.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1",
+    "supertest": "^4.0.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
+}
