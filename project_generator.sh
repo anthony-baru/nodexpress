@@ -34,7 +34,7 @@ done
 
 echo 'import express from "express";
 const server = express();
-const PORT = process.ev.PORT  || 3000;
+const PORT = process.env.PORT  || 3000;
 
 async function main() {
   // TODO: register middlewares (CORS...)
