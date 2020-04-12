@@ -5,21 +5,12 @@ import { rootRouter } from "./routes";
 async function main() {
   // TODO: register middlewares (CORS...)
   registerMiddlewares(server);
+  //redirect all / requests to /v1
+  server.all('/', (req, res) => res.redirect('/v1'));
+
   // TODO: use router
-  // server.get("/", (req, res, next) => {
-  //   res.json({ message: `Handling ${req.method} request.` })
-  // });
-  // server.post("/", (req, res, next) => {
-  //   res.json({ message: `Handling ${req.method} request.` })
-  // });
-  // server.put("/", (req, res, next) => {
-  //   res.json({ message: `Handling ${req.method} request.` })
-  // });
-  // server.delete("/", (req, res, next) => {
-  //   res.json({ message: `Handling ${req.method} request.` })
-  // });
-  // TODO: default express error handling middleware
   server.use("/v1", rootRouter);
+  // TODO: default express error handling middleware
   server.listen();
 }
 
